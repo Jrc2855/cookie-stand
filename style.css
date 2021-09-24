@@ -1,3 +1,113 @@
-body{
-  background-color: beige;
+
+html nav, a {
+  background-color:saddlebrown;
+  color:white;
+  overflow:hidden;
+  height: 90px;
+  text-decoration: none;
+}
+
+header {
+  background-color:saddlebrown;
+  height: 100px;
+  width: 100%;
+}
+
+header nav a {
+  margin: 0 80px;
+  text-align: center;
+  width: auto;
+  height: 90px;
+  font-size:50px;
+  float: left;
+}
+
+header nav img {
+  float: left;
+  margin-right: 30px;
+}
+
+#logo {
+  height:55px;
+}
+
+h1 {
+  background-color:saddlebrown;
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+nav ul {
+  float: left;
+}
+
+nav li {
+  display: inline-block;
+  padding: 8px;
+}
+
+
+body {
+  background-color:cadetblue;
+  color: white;
+}
+
+h1 {
+  font-size:80px;
+  text-align:center;
+}
+
+body img{
+ display: block;
+ margin: auto;
+}
+
+p {
+  display:block;
+  text-align:center;
+  width: 50%;
+  padding:20px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+  margin-bottom:50px;
+  background-color:saddlebrown;
+  font-size:30px;
+}
+table, td, th {
+  background-color: saddlebrown;
+  border: solid black thin;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#shirt {
+  float: left;
+  margin-left:400px;
+}
+
+#cutter {
+  float: right;
+  margin-right:400px;
+}
+
+/* https://www.w3schools.com/css/css_list.asp */
+#Contacts {
+  background-color:saddlebrown;
+  list-style-type:none;
+  width: 50%;
+  margin-right:auto;
+  margin-left:auto;
+  text-align:center;
+  font-size:25px;
+}
+
+
+
+footer {
+  width: 100%;
+  overflow:hidden;
+
 }
