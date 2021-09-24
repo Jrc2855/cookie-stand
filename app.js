@@ -4,6 +4,7 @@ let hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm',
  '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
 
+
 function StoreLocation (location, minCust, maxCust,avgSales) {
   this.location = location;
   this.minCust = minCust;
@@ -29,6 +30,26 @@ StoreLocation.prototype.calcAvgCookiesBought = function() {
 StoreLocation.prototype.calcRandomCustomers = function() {
   return (Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust)) * this.avgSales;
 };
+
+let addToForm = document.getElementById("addStore");
+
+addToForm.addEventListener('submit', addAnotherStore);
+
+function addAnotherStore(event) {
+  event.preventDefault();
+  let field1 = event.target.cityName.value;
+  let field2 = event.target.minCust.value;
+  let field3 = event.target.maxCust.value;
+  let field4 = event.target.avgSales.value;
+  let newLocation = new StoreLocation(field1, field2, field3, field4);
+  //let addToFooter = document.getElementById("footer");
+  //addToFooter.parentEl.removeChild(footerElement);
+  newLocation.renderTableRow();
+  renderFooter(StoreLocation.all)
+};
+
+
+
 function renderHeader() {
   let parentEl = document.getElementById('sales-data');
   let rowEl = document.createElement('tr');
@@ -114,9 +135,10 @@ function renderFooter() {
   dataEl.innerText = grandTotal;
   rowEl.appendChild(dataEl);
   parentEl.appendChild(rowEl);
-}
+};
 
 renderFooter();
+
 
 
 

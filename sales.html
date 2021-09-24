@@ -15,7 +15,27 @@
     <body>
       <title>Sales Data</title>
       <p> Here you can see our most recent sales records.</p>
-      <table id ="sales-data"></table>     
+      <table id ="sales-data"></table> <br>    
+      <form id="addStore">
+        <fieldset>
+          <legend>New Store Location Suggestions</legend>
+
+          <label for='cityName'>City Name: </label>
+          <input type="text" name='cityName' required>
+
+          <label for='minCust'>Expected Minimum Customers: </label>
+          <input type="number" name='minCust' required>
+
+          <label for='maxCust'>Expected Maximum Customers: </label>
+          <input type="number" name='maxCust' required>
+
+          <label for='avgSales'>Expected Average Sales: </label>
+          <input type="number" name='avgSales' required>
+
+          <input type="submit" value="Add to Table!">
+        </fieldset>
+      </form>
+      
       <p>Below you can see some of the merch we've got on offer!</p>
       <article>
         <img id="shirt" src="images/shirt.jpg">
